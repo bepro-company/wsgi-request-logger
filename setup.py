@@ -21,13 +21,13 @@ except Exception as e:
     sys.stderr.write(str(e) + '\n')
     LDESC = ''
 
-setup(name='wsgi-request-logger',
-      version = '0.4.6',
+setup(name='wsgi-request-logger-bepro',
+      version = '0.4.7',
       description = 'Apache-like combined logging for WSGI Web Applications',
       long_description = LDESC,
-      author = 'Philipp Klaus',
-      author_email = 'philipp.l.klaus@web.de',
-      url = 'https://github.com/pklaus/wsgi-request-logger',
+      author = 'Bepro Company',
+      author_email = 'dev@bepro11.com',
+      url = 'https://github.com/bepro-company/wsgi-request-logger',
       license = 'BSD',
       packages = ['requestlogger'],
       zip_safe = True,
