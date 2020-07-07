@@ -6,9 +6,8 @@ Copyright (c) 2007-2011 L. C. Rees. All rights reserved.
 
 License: BSD (see LICENSE for details)
 """
-
-from distutils.core import setup
 import sys
+from setuptools import setup
 
 try:
     import pypandoc
