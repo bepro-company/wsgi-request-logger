@@ -92,7 +92,14 @@ class ApacheFormatters(object):
         else:
             val['host'] = environ.get('REMOTE_ADDR', '')
         val['logname'] = '-'
-        val['user'] = '-'
+
+        from crequest.middleware import CrequestMiddleware
+        request = CrequestMiddleware.get_request()
+        if request and request.user and request.user.is_authenticated:
+            user = request.user.id
+        else:
+            user = '-'
+        val['user'] = user
         date = dt.now(tz=Local)
         month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"][date.month - 1]
         val['time'] = date.strftime("%d/{0}/%Y:%H:%M:%S %z".format(month))
