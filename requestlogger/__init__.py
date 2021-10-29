@@ -78,6 +78,8 @@ class ApacheFormatters(object):
           "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-agent}i\""
           see http://httpd.apache.org/docs/current/mod/mod_log_config.html#formats
         """
+        print(environ)
+        print(kwargs)
         
         # Let's collect log values
         val = dict()
